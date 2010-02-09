@@ -1,0 +1,109 @@
+<$mt:var name="folder_creator" value="admin"$>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="<$mt:Version$>" created="<$mt:Date$>"-->
+<rss version="2.0"
+	xmlns:excerpt="http://wordpress.org/export/1.0/excerpt/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wp="http://wordpress.org/export/1.0/"
+>
+
+<channel>
+	<title><$mt:BlogName$></title>
+	<link><$mt:BlogURL$></link>
+	<description><$mt:BlogDescription$></description>
+	<pubDate><$mt:Date format="%Y-%m-%d %H:%M:%S" utc="1"$></pubDate>
+	<generator><$mt:ProductName$><$mt:Version$></generator>
+	<language><$mt:BlogLanguage$></language>
+	<wp:wxr_version>1.0</wp:wxr_version>
+	<<wp:base_site_url><$mt:BlogURL$></wp:base_site_url>
+	<wp:base_blog_url><$mt:BlogURL$></wp:base_blog_url>
+	<mt:Categories>
+		<wp:category>
+			<wp:category_nicename><$mt:CategoryLabel$></wp:category_nicename>
+			<wp:category_parent><mt:ParentCategory><$mt:CategoryID$</mt:ParentCategory></wp:category_parent>
+			<wp:cat_name><![CDATA[<$mt:CategoryLabel encode_url="1"$>]]></wp:cat_name>
+		</wp:category>
+	</mt:Categories>
+	<mt:Tags limit="5000">
+		<wp:tag>
+			<wp:tag_slug><$mt:TagName replace=" ","-"$></wp:tag_slug>
+			<wp:tag_name><![CDATA["<$mt:TagName$>"]]></wp:tag_name>
+		</wp:tag>
+	</mt:Tags>
+	<mt:Entries limit="10000">
+	<item>
+		<title><$mt:EntryTitle$></title>
+		<link><$mt:EntryPermalink$></link>
+		<pubDate><$mt:EntryDate format="%Y-%m-%d %H:%M:%S"$></pubDate>
+		<dc:creator><![CDATA[<$mt:EntryAuthor$>]]></dc:creator>
+		<mt:EntryCategories>
+			<category><![CDATA["<$mt:CategoryLabel$>"]]></category>
+			<category domain="category" nicename="<$mt:CategoryLabel replace=" ","-"$>"><![CDATA["<$mt:CategoryLabel$>"]]></category>
+		</mt:EntryCategories>
+		<mt:EntryTags>
+			<category domain="tag"><![CDATA[<$mt:TagName$>]]></category>
+			<category domain="tag" nicename="<$mt:TagName replace=" ","-"$>"><![CDATA["<$mt:TagName$>"]]></category>
+		</mt:EntryTags>
+
+		<guid isPermaLink="false"><$mt:EntryPermalink$></guid>
+		<description></description>
+		<content:encoded><![CDATA[<$mt:EntryBody$>]]></content:encoded>
+		<excerpt:encoded><![CDATA[<$mt:EntryExcerpt$>]]></excerpt:encoded>
+		<wp:post_id><$mt:EntryID$></wp:post_id>
+		<wp:post_date><$mt:EntryDate format="%Y-%m-%d %H:%M:%S"$></wp:post_date>
+		<wp:post_date_gmt><$mt:EntryDate format="%Y-%m-%d %H:%M:%S" utc="1"$></wp:post_date_gmt>
+		<wp:comment_status><mt:EntryIfAllowComments>open<mt:Else>closed</mt:EntryIfAllowComments></wp:comment_status>
+		<wp:ping_status><mt:EntryIfAllowPings>open<mt:Else>closed</mt:EntryIfAllowPings></wp:ping_status>
+		<wp:post_name><$mt:EntryTitle lower_case="1" replace=" ","-"$></wp:post_name>
+		<wp:status><$mt:EntryStatus$></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<mt:Comments limit="10000">
+		<wp:comment>
+			<wp:comment_id><$mt:CommentID$></wp:comment_id>
+			<wp:comment_author><![CDATA[<$mt:CommentAuthor$>]]></wp:comment_author>
+			<wp:comment_author_email><$mt:CommentEmail$></wp:comment_author_email>
+			<wp:comment_author_url><$mt:CommentURL$></wp:comment_author_url>
+			<wp:comment_author_IP><$mt:CommentIP$></wp:comment_author_IP>
+			<wp:comment_date><$mt:CommentDate format="%Y-%m-%d %H:%M:%S"$></wp:comment_date>
+			<wp:comment_date_gmt><$mt:CommentDate format="%Y-%m-%d %H:%M:%S" utc="1"$></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[<$mt:CommentBody$>]]></wp:comment_content>
+			<wp:comment_approved><mt:CommentIfModerated>1<mt:Else>0</mt:CommentIfModerated></wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent><mt:CommentParent><$mt:CommentID$></mt:CommentParent></wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+		</wp:comment>
+		</mt:Comments>
+	</item>
+	</mt:Entries>
+	<mt:TopLevelFolders>
+	<item>
+		<title><$mt:FolderLabel$></title>
+		<link><$mt:BlogURL$><$mt:FolderPath$></link>
+		<pubDate><mt:Pages limit="1"><$mt:PageDate format="%Y-%m-%d %H:%M:%S"$></mt:Pages></pubDate>
+		<dc:creator><![CDATA[<$mt:var name="folder_creator"$>]]></dc:creator>
+		<guid isPermaLink="false"><$mt:BlogURL$><$mt:FolderPath$></guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id><$mt:FolderID$></wp:post_id>
+		<wp:post_date><mt:Pages limit="1"><$mt:PageDate format="%Y-%m-%d %H:%M:%S"$></mt:Pages></wp:post_date>
+		<wp:post_date_gmt><mt:Pages limit="1"><$mt:PageDate format="%Y-%m-%d %H:%M:%S" utc="1"$></mt:Pages></wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name><$mt:FolderLabel lower_case="1" replace=" ","-"$></wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent><mt:ParentFolder><$mt:FolderID setvar="parent_folder"$></mt:ParentFolder><mt:If name="parent_folder"><$mt:var name="parent_folder"$><mt:Else>0</mt:If><mt:var name="parent_folder" value="0"></wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+	</item>
+	<$mt:SubFolderRecurse$>
+	</mt:TopLevelFolders>
+</channel>
+</rss>
