@@ -38,6 +38,7 @@
 			<wp:tag_name><![CDATA["<$mt:TagName encode_xml="1"$>"]]></wp:tag_name>
 		</wp:tag>
 	</mt:Tags>
+	<mt:If name="export_entries">
 	<mt:Entries limit="$number_of_entries" offset="$entries_offset">
 	<item>
 		<title><$mt:EntryTitle encode_xml="1"$></title>
@@ -86,6 +87,8 @@
 		</mt:Comments>
 	</item>
 	</mt:Entries>
+	</mt:If>
+	<mt:If name="export_folders">
 	<mt:TopLevelFolders>
 	<item>
 		<title><$mt:FolderLabel encode_xml="1"$></title>
@@ -110,5 +113,9 @@
 	</item>
 	<$mt:SubFolderRecurse encode_xml="1"$>
 	</mt:TopLevelFolders>
+	</mt:If>
+	<mt:If name="export_pages">
+
+	</mt:If>
 </channel>
 </rss>
