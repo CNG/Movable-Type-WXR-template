@@ -45,10 +45,14 @@
 		<link><$mt:EntryPermalink encode_xml="1"$></link>
 		<pubDate><$mt:EntryDate format="%Y-%m-%d %H:%M:%S" encode_xml="1"$></pubDate>
 		<dc:creator><![CDATA[<$mt:EntryAuthor encode_xml="1"$>]]></dc:creator>
-		<mt:EntryCategories>
-			<category><![CDATA["<$mt:CategoryLabel encode_xml="1"$>"]]></category>
-			<category domain="category" nicename="<$mt:CategoryLabel replace=" ","-" encode_xml="1"$>"><![CDATA["<$mt:CategoryLabel encode_xml="1"$>"]]></category>
-		</mt:EntryCategories>
+    	<mt:If tag="EntryCategory">
+    		<mt:EntryCategories>
+			<category><![CDATA[<$mt:CategoryLabel encode_xml="1"$>]]></category>
+			<category domain="category" nicename="<$mt:CategoryLabel replace=" ","-" encode_xml="1"$>"><![CDATA[<$mt:CategoryLabel encode_xml="1"$>]]></category>
+    		</mt:EntryCategories>
+    	<mt:else>
+			<category><![CDATA[Dailies]]></category>
+    	</mt:If>
 		<mt:EntryTags>
 			<category domain="tag"><![CDATA[<$mt:TagName encode_xml="1"$>]]></category>
 			<category domain="tag" nicename="<$mt:TagName replace=" ","-" encode_xml="1"$>"><![CDATA["<$mt:TagName encode_xml="1"$>"]]></category>
